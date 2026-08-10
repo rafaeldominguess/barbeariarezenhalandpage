@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@theme {
+  --color-laranja-marca: #f97316;
+  --color-laranja-hover: #ea580c;
+  --font-inter: var(--font-inter);
+}
+
+:root {
+  /* Cores de Fundo - Tons de preto e cinza muito escuro para dar profundidade */
+  --bg-principal: black;
+  --bg-secundario: black;
+
+  /* Textos */
+  --texto-primario: #ffffff; /* Branco puro: Apenas para Títulos principais (H1) e chamadas de muita importância */
+  --texto-secundario: #d4d4d4; /* Cinza claro (Tailwind neutral-300): Perfeito para subtítulos (H2, H3) */
+  --texto-terciario: #a3a3a3; /* Cinza médio (Tailwind neutral-400): Ideal para parágrafos e textos longos */
+
+  /* O Laranja "ReZenha" */
+  --laranja-marca: #f97316; /* Tom vibrante para botões e detalhes */
+  --laranja-hover: #ea580c; /* Um tom mais escuro para interações */
+
+  /* Efeitos Futuristas */
+  --glow-laranja: rgba(249, 115, 22, 0.15); /* Para o fundo dos cards */
+  --shadow-neon: 0 0 15px rgba(249, 115, 22, 0.5); /* Para as bordas brilhantes */
+}
+
+/* Animação para o feixe de luz giratório dos cards */
+@keyframes rotate-border {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-rotate-border {
+  animation: rotate-border 4s linear infinite;
+}
+
+body {
+  background: black;
+  color: var(--texto-primario);
+  font-family: var(--font-inter);
+}
+
+html {
+  scroll-behavior: smooth;
+}
